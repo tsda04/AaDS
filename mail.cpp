@@ -21,8 +21,12 @@ public:
 		delete[] coordinate;
 	}
 	void print() const {
-		for (int i = 0; i < size; ++i)
-			std::cout << coordinate[i] << " ";
+		std::cout << "{ ";
+		for (int i = 0; i < size-1; ++i)
+			std::cout << coordinate[i] << "; ";
+		std::cout << coordinate[size - 1] << " ";
+		std::cout << "}";
+		std::cout << std::endl;
 	}
 };
 int main() {
